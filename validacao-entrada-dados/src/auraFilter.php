@@ -9,16 +9,16 @@ class Teste{
 	function teste() {
 		$filter_factory = new FilterFactory();
 		$filter = $filter_factory->newSubjectFilter();
-		return $filter->validate('vitorh.brangioni@gmail.com')->is('email');
+		return $filter->validate(false)->is('bool');
 	}
 	
 }
 
 $teste = new Teste();
+$is = $teste->teste();
 
-
-if($teste->teste() instanceof Aura) {
+if($teste === true) {
 	echo 'success';
-} else {
+} else if($is === false){
 	echo 'fail';
 }
