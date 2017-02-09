@@ -1,0 +1,6 @@
+{
+    "require": {
+        "respect/validation": "^1.1",
+        "aura/filter": "^2.3"
+    }
+}
